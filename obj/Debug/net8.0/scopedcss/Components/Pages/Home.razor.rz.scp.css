@@ -1,0 +1,114 @@
+body[b-h2tgf6zun9] {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container[b-h2tgf6zun9] {
+    margin-top: 20px;
+}
+
+.title[b-h2tgf6zun9] {
+    margin-top: 30px;
+    text-align: center;
+}
+.title-description[b-h2tgf6zun9] {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.row[b-h2tgf6zun9] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.col-md-4[b-h2tgf6zun9] {
+    box-sizing: border-box;
+    padding: 15px; /* Adds padding around the column to create spacing */
+    flex: 1 0 25%; /* Ensures three items per row */
+    max-width: 30%;
+}
+
+.card[b-h2tgf6zun9] {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    overflow: hidden;
+    height: 400px; /* Fixed height for cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover[b-h2tgf6zun9] {
+    transform: scale(1.05);
+}
+
+.card-img-top[b-h2tgf6zun9] {
+    width: calc(100% - 20px); /* Adjust width to accommodate padding */
+    height: 200px; /* Fixed height for images */
+    background-size: contain; /* Ensure the entire image fits within the container */
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 0s ease, background-position 0s ease; /* Smooth transition for zoom and position */
+    border: solid 2px #ddd;
+    padding: 10px;
+    margin: 10px auto 0; /* Center image horizontally and add top margin */
+    box-sizing: border-box;
+}
+
+.card-img-top:hover[b-h2tgf6zun9] {
+    background-size: 100%; /* Zoom in on hover */
+}
+
+.card-body[b-h2tgf6zun9] {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    flex-grow: 1; /* Allow card body to grow and take available space */
+}
+
+.card-title[b-h2tgf6zun9] {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text[b-h2tgf6zun9] {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+    flex-grow: 1; /* Allow text to grow and take available space */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+.card-footer[b-h2tgf6zun9] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price[b-h2tgf6zun9]{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.btn-primary[b-h2tgf6zun9] {
+    background-color: #55AD9B;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    align-self: flex-end; /* Align button to the end of the flex container */
+}
+
+.btn-primary:hover[b-h2tgf6zun9] {
+    background-color: #95D2B3;
+}
