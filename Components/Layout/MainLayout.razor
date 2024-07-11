@@ -4,12 +4,16 @@
     <main>
         <div class="top-bar">
             <div class="top-row px-4">
-                <p class="logo">BlazorShop</p>
+                <a href="/" class="logo-link">
+                    <p class="logo">BlazorShop</p>
+                </a>
             </div>
 
             <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-input">
-                <button type="button" class="search-button">Search</button>
+                <EditForm Model="@this" OnValidSubmit="HandleSubmit">
+                    <InputText placeholder="Search..." class="search-input" @bind-Value="searchTerm" />
+                    <button type="submit" class="search-button">Search</button>
+                </EditForm>
             </div>
 
             <div class="top-row px-4">
@@ -23,8 +27,21 @@
     </main>
 </div>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div>
+@code {
+    private string searchTerm = string.Empty;
+
+    private void PerformSearch()
+    {
+        Console.WriteLine("PerformSearch called");
+        Console.WriteLine($"Navigating to /search/{Uri.EscapeDataString(searchTerm)}");
+        NavigationManager.NavigateTo($"/search/{Uri.EscapeDataString(searchTerm)}");
+    }
+
+    private void HandleSubmit()
+    {
+        PerformSearch();
+    }
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+}

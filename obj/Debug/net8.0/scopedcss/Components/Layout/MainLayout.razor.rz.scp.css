@@ -17,30 +17,38 @@ main[b-cx2sbui8ia] {
     padding: 0.5rem;
 }
 
-    p.logo[b-cx2sbui8ia], p.cart[b-cx2sbui8ia] {
-        margin-top: 1rem;
-    }
-    .logo[b-cx2sbui8ia], .cart[b-cx2sbui8ia] {
-        display: flex;
-        align-items: center;
-        background-color: #95D2B3;
-        padding: 0.5rem 1rem;
-    }
-    .cart[b-cx2sbui8ia] {
-        background-color: white;
-    }
-    .search-container[b-cx2sbui8ia] {
-        display: flex;
-        flex: 1;
-        margin: 0 1rem;
-    }
-    .search-input[b-cx2sbui8ia]{
-        flex: 1;
-        padding: 0.5rem;
-    }
-    .search-button[b-cx2sbui8ia] {
-        padding: 0.5rem 1rem;
-    }
+.logo[b-cx2sbui8ia] {
+    color: black;
+}
+
+.logo-link[b-cx2sbui8ia], .logo-link:hover[b-cx2sbui8ia] {
+    text-decoration: none;
+}
+
+p.logo[b-cx2sbui8ia], p.cart[b-cx2sbui8ia] {
+    margin-top: 1rem;
+}
+.logo[b-cx2sbui8ia], .cart[b-cx2sbui8ia] {
+    display: flex;
+    align-items: center;
+    background-color: #95D2B3;
+    padding: 0.5rem 1rem;
+}
+.cart[b-cx2sbui8ia] {
+    background-color: white;
+}
+.search-container[b-cx2sbui8ia] {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+}
+.search-input[b-cx2sbui8ia]{
+    flex: 1;
+    padding: 0.5rem;
+}
+.search-button[b-cx2sbui8ia] {
+    padding: 0.5rem 1rem;
+}
 
 .product-area[b-cx2sbui8ia]{
     display: flex;
@@ -57,9 +65,6 @@ main[b-cx2sbui8ia] {
     border-radius: 0.5rem;
 }
 
-
-
-
 .top-row[b-cx2sbui8ia] {
     justify-content: flex-end;
     height: 3.5rem;
@@ -67,20 +72,20 @@ main[b-cx2sbui8ia] {
     align-items: center;
 }
 
-    .top-row[b-cx2sbui8ia]  a, .top-row[b-cx2sbui8ia]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row[b-cx2sbui8ia]  a, .top-row[b-cx2sbui8ia]  .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
 
-    .top-row[b-cx2sbui8ia]  a:hover, .top-row[b-cx2sbui8ia]  .btn-link:hover {
-        text-decoration: underline;
-    }
+.top-row[b-cx2sbui8ia]  a:hover, .top-row[b-cx2sbui8ia]  .btn-link:hover {
+    text-decoration: underline;
+}
 
-    .top-row[b-cx2sbui8ia]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.top-row[b-cx2sbui8ia]  a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 640.98px) {
     .top-row[b-cx2sbui8ia] {
@@ -122,8 +127,6 @@ main[b-cx2sbui8ia] {
     }
 }
 
-
-
 #blazor-error-ui[b-cx2sbui8ia] {
     background: lightyellow;
     bottom: 0;
@@ -136,9 +139,9 @@ main[b-cx2sbui8ia] {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss[b-cx2sbui8ia] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss[b-cx2sbui8ia] {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}

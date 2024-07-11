@@ -1,0 +1,257 @@
+@page "/search/{searchTerm}"
+@using BlazorShop.Models
+@inject NavigationManager NavigationManager
+
+@code {
+    [Parameter]
+    public string searchTerm { get; set; }
+
+    private List<Product> products = new List<Product>
+    {
+        new Product { 
+            ImageUrl = "images/boss_bd-2w_001.jpg", 
+            Title = "Boss BD-2W", 
+            Description = "Premium overdrive pedal delivering classic blues tones with warm, tube-like overdrive and exceptional clarity.", 
+            Price = 260
+            },
+
+        new Product { 
+            ImageUrl = "images/boss_dm-2w_001.jpg", 
+            Title = "Boss DM-2W", 
+            Description = "Modern reissue of the classic analog delay, offering warm delays up to 300ms in standard mode and cleaner, longer delays in custom mode.", 
+            Price = 220
+            },
+
+        new Product { 
+            ImageUrl = "images/boss_sd-1w_001.jpg", 
+            Title = "Boss SD-1W", 
+            Description = "High-quality overdrive pedal combining the classic SD-1 sound with enhanced tonal options for smooth and dynamic overdrive.", 
+            Price = 230 
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_bp1w_001.jpg", 
+            Title = "Boss BP-1W", 
+            Description = "High-quality bass preamp pedal offering rich, versatile tones with exceptional clarity and dynamic response.", 
+            Price = 250
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_dc2w_001.jpg", 
+            Title = "Boss DC-2W", 
+            Description = "Stereo chorus pedal delivering lush, spatial effects with classic Dimension C sound and enhanced tonal options.", 
+            Price = 330
+            },
+        
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_ds1w_001.jpg", 
+            Title = "Boss DC-1W", 
+            Description = "High-quality distortion pedal offering the classic DS-1 sound with enhanced tonal options and dynamic response.", 
+            Price = 220
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_fz1w_001.jpg", 
+            Title = "Boss FZ-1W", 
+            Description = "Premium fuzz pedal delivering classic and modern fuzz tones with exceptional clarity and dynamic response.", 
+            Price = 310
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_hm2w_001.jpg", 
+            Title = "Boss HM-2W", 
+            Description = "High-gain distortion pedal offering iconic heavy metal tones with enhanced versatility and control.", 
+            Price = 210
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_mt2w_001.jpg", 
+            Title = "Boss MT-2W", 
+            Description = "High-gain distortion pedal providing aggressive, cutting tones with advanced tonal shaping capabilities.", 
+            Price = 240
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-compact-wazacraft_tb2w_001.jpg", 
+            Title = "Boss TB-2W", 
+            Description = "Authentic reproduction of the classic Tone Bender fuzz pedal with modern enhancements for improved performance.", 
+            Price = 480
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-waza_ce-2w_001.jpg", 
+            Title = "Boss CE-2W", 
+            Description = "Premium chorus pedal combining the classic CE-2 and CE-1 sounds with rich, warm modulation.", 
+            Price = 315
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-wazacraft_tu-3w_001.jpg", 
+            Title = "Boss TU-3W", 
+            Description = "High-precision tuner pedal offering enhanced accuracy, durability, and true bypass functionality.", 
+            Price = 230
+            },
+
+        new Product { 
+            ImageUrl = "images/boss-wazacraft_vb-2w_001.jpg", 
+            Title = "Boss VB-2W", 
+            Description = "Premium vibrato pedal delivering lush, vintage vibrato effects with modern tonal enhancements.", 
+            Price = 365
+            }
+    };
+
+    private IEnumerable<Product> FilteredProducts => products.Where(p => 
+        p.Title.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || 
+        p.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+    );
+}
+
+<h1>Search Results for "@searchTerm"</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var product in FilteredProducts)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-img-top" style="background-image: url('@product.ImageUrl'); height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Title</h5>
+                        <p class="card-text text-truncate">@product.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">@product.Price.ToString("C")</span>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .container {
+        margin-top: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .col-md-4 {
+        box-sizing: border-box;
+        padding: 15px; /* Adds padding around the column to create spacing */
+        flex: 1 0 25%; /* Ensures three items per row */
+        max-width: 30%;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        overflow: hidden;
+        height: 400px; /* Fixed height for cards */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-img-top {
+        width: calc(100% - 20px); /* Adjust width to accommodate padding */
+        height: 200px; /* Fixed height for images */
+        background-size: contain; /* Ensure the entire image fits within the container */
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-size 0s ease, background-position 0s ease; /* Smooth transition for zoom and position */
+        border: solid 2px #ddd;
+        padding: 10px;
+        margin: 10px auto 0; /* Center image horizontally and add top margin */
+        box-sizing: border-box;
+    }
+
+    .card-img-top:hover {
+        background-size: 100%; /* Zoom in on hover */
+    }
+
+    .card-body {
+        padding: 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribute space between elements */
+        flex-grow: 1; /* Allow card body to grow and take available space */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 16px;
+        flex-grow: 1; /* Allow text to grow and take available space */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3; /* Limit to 3 lines */
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price{
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .btn-primary {
+        background-color: #55AD9B;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+        align-self: flex-end; /* Align button to the end of the flex container */
+    }
+
+    .btn-primary:hover {
+        background-color: #95D2B3;
+    }
+
+    /* Media Queries for Responsive Design */
+    @@media (max-width: 1200px) {
+        .col-md-4 {
+            flex: 1 0 28%; /* Three items per row */
+            max-width: 28%;
+        }
+    }
+
+    @@media (max-width: 992px) {
+        .col-md-4 {
+            flex: 1 0 45%; /* Two items per row */
+            max-width: 45%;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .col-md-4 {
+            flex: 1 0 100%; /* One item per row */
+            max-width: 100%;
+        }
+    }
+</style>
+
