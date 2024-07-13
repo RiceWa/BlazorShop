@@ -1,5 +1,8 @@
 ﻿@page "/"
 
+@using BlazorShop.Models
+@inject BlazorShop.Services.ProductService ProductService
+
 <PageTitle>Home</PageTitle>
 
 <h1 class=title>Every Pedal For Every Sound.</h1>
@@ -12,12 +15,13 @@
             @foreach (var product in products)
             {
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-img-top" style="background-image: url('@product.ImageUrl');"></div>
+                    <div class="card mb-4 shadow-sm">
+                        <a href="/product/@product.Id" class="card-img-top" style="background-image: url('@product.ImageUrl'); height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center;">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">@product.Title</h5>
-                            <p class="card-text">@product.Description</p>
-                            <div class="card-footer">
+                            <p class="card-text text-truncate">@product.Description</p>
+                            <div class="d-flex justify-content-between align-items-center">
                                 <span class="price">@product.Price.ToString("C")</span>
                                 <a href="#" class="btn btn-primary">Add to Cart</a>
                             </div>
@@ -29,254 +33,12 @@
     </div>
 </body>
 
-
-<script>
-    // Select all elements with the class 'card-img-top'
-    document.querySelectorAll('.card-img-top').forEach(function(cardImgTop) {
-        // Add a 'mousemove' event listener to each selected element
-        cardImgTop.addEventListener('mousemove', function(e) {
-            // Get the bounding rectangle of the element (position and dimensions)
-            const rect = cardImgTop.getBoundingClientRect();
-            // Calculate the x position of the mouse within the element
-            const x = e.clientX - rect.left;
-            // Calculate the y position of the mouse within the element
-            const y = e.clientY - rect.top;
-
-            // Calculate the x and y percentages relative to the element's width and height
-            const xPercent = x / rect.width * 100;
-            const yPercent = y / rect.height * 100;
-
-            // Set the background position based on the mouse position percentages
-            cardImgTop.style.backgroundPosition = `${xPercent - 20}% ${yPercent - 20}%`;
-        });
-
-        // Add a 'mouseleave' event listener to reset the background position when the mouse leaves the element
-        cardImgTop.addEventListener('mouseleave', function() {
-            // Reset the background position to 'center' when the mouse leaves
-            cardImgTop.style.backgroundPosition = 'center';
-        });
-    });
-</script>
-
-
 @code {
-    @using BlazorShop.Models;
+    
+    private List<Product> products;
 
-    private List<Product> products = new List<Product>
+    protected override void OnInitialized()
     {
-        new Product { 
-            ImageUrl = "images/boss_bd-2w_001.jpg", 
-            Title = "Boss BD-2W", 
-            Description = "Premium overdrive pedal delivering classic blues tones with warm, tube-like overdrive and exceptional clarity.", 
-            Price = 260
-            },
-
-        new Product { 
-            ImageUrl = "images/boss_dm-2w_001.jpg", 
-            Title = "Boss DM-2W", 
-            Description = "Modern reissue of the classic analog delay, offering warm delays up to 300ms in standard mode and cleaner, longer delays in custom mode.", 
-            Price = 220
-            },
-
-        new Product { 
-            ImageUrl = "images/boss_sd-1w_001.jpg", 
-            Title = "Boss SD-1W", 
-            Description = "High-quality overdrive pedal combining the classic SD-1 sound with enhanced tonal options for smooth and dynamic overdrive.", 
-            Price = 230 
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_bp1w_001.jpg", 
-            Title = "Boss BP-1W", 
-            Description = "High-quality bass preamp pedal offering rich, versatile tones with exceptional clarity and dynamic response.", 
-            Price = 250
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_dc2w_001.jpg", 
-            Title = "Boss DC-2W", 
-            Description = "Stereo chorus pedal delivering lush, spatial effects with classic Dimension C sound and enhanced tonal options.", 
-            Price = 330
-            },
-        
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_ds1w_001.jpg", 
-            Title = "Boss DC-1W", 
-            Description = "High-quality distortion pedal offering the classic DS-1 sound with enhanced tonal options and dynamic response.", 
-            Price = 220
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_fz1w_001.jpg", 
-            Title = "Boss FZ-1W", 
-            Description = "Premium fuzz pedal delivering classic and modern fuzz tones with exceptional clarity and dynamic response.", 
-            Price = 310
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_hm2w_001.jpg", 
-            Title = "Boss HM-2W", 
-            Description = "High-gain distortion pedal offering iconic heavy metal tones with enhanced versatility and control.", 
-            Price = 210
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_mt2w_001.jpg", 
-            Title = "Boss MT-2W", 
-            Description = "High-gain distortion pedal providing aggressive, cutting tones with advanced tonal shaping capabilities.", 
-            Price = 240
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-compact-wazacraft_tb2w_001.jpg", 
-            Title = "Boss TB-2W", 
-            Description = "Authentic reproduction of the classic Tone Bender fuzz pedal with modern enhancements for improved performance.", 
-            Price = 480
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-waza_ce-2w_001.jpg", 
-            Title = "Boss CE-2W", 
-            Description = "Premium chorus pedal combining the classic CE-2 and CE-1 sounds with rich, warm modulation.", 
-            Price = 315
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-wazacraft_tu-3w_001.jpg", 
-            Title = "Boss TU-3W", 
-            Description = "High-precision tuner pedal offering enhanced accuracy, durability, and true bypass functionality.", 
-            Price = 230
-            },
-
-        new Product { 
-            ImageUrl = "images/boss-wazacraft_vb-2w_001.jpg", 
-            Title = "Boss VB-2W", 
-            Description = "Premium vibrato pedal delivering lush, vintage vibrato effects with modern tonal enhancements.", 
-            Price = 365
-            },
-
-        new Product {
-            ImageUrl = "images/boss_200-dd200_001.jpg",
-            Title = "Boss DD-200",
-            Description = "Versatile delay pedal offering twelve distinct delay modes, advanced control options, and up to 10 seconds of delay time, ideal for a wide range of musical styles.",
-            Price = 360
-            },
-
-        new Product {
-            ImageUrl = "images/boss_200-eq200_001.jpg",
-            Title = "Boss EQ-200",
-            Description = "Powerful and compact graphic equalizer pedal with ten bands of EQ, stereo functionality, and detailed tone shaping capabilities for any setup.",
-            Price = 360
-            },
-
-        new Product {
-            ImageUrl = "images/boss_200-md200_001.jpg",
-            Title = "Boss MD-200",
-            Description = "Versatile modulation pedal featuring twelve different modulation effects, deep control options, and high-quality sound for a wide range of musical styles.",
-            Price = 360
-            },
-        
-        new Product {
-            ImageUrl = "images/boss_200-od200_001.jpg",
-            Title = "Boss OD-200",
-            Description = "Advanced overdrive and distortion pedal combining multiple gain types, customizable controls, and hybrid analog/digital processing for a wide range of tones.",
-            Price = 360
-            },
-
-        new Product {
-            ImageUrl = "images/boss-200_ir200_001.jpg",
-            Title = "Boss IR-200",
-            Description = "High-quality amp and cabinet simulator pedal featuring advanced impulse response (IR) technology, multiple amp types, and extensive tone-shaping options for direct recording and live performance.",
-            Price = 530
-            },
-
-        new Product {
-            ImageUrl = "images/boss-200_rc10r_001.jpg",
-            Title = "Boss RC-10R",
-            Description = "Compact looper pedal with integrated rhythm tracks, offering versatile looping capabilities, high-quality sound, and intuitive control for live performance and practice.",
-            Price = 430
-            },
-
-        new Product {
-            ImageUrl = "images/boss-200_sy200_001.jpg",
-            Title = "Boss SY-200",
-            Description = "Versatile synthesizer pedal offering a wide range of synth tones, advanced polyphony, and intuitive controls for seamless integration into any pedalboard setup.",
-            Price = 430
-            },
-        
-        new Product {
-            ImageUrl = "images/boss_dd-500_001.jpg",
-            Title = "Boss DD-500",
-            Description = "Advanced digital delay pedal featuring twelve delay modes, extensive control options, and up to 10 seconds of delay time, providing exceptional versatility and high-quality sound.",
-            Price = 550
-            },
-
-        new Product {
-            ImageUrl = "images/boss_md500_001.jpg",
-            Title = "Boss MD-500",
-            Description = "Premium modulation pedal with 28 different effects, extensive control options, and advanced digital processing for a wide array of high-quality modulation sounds.",
-            Price = 550
-            },
-
-        new Product {
-            ImageUrl = "images/boss_rc500_001.jpg",
-            Title = "Boss RC-500",
-            Description = "High-performance looper pedal with dual tracks, onboard rhythms, and extensive control features, designed for complex looping and creative performance.",
-            Price = 520
-            },
-
-        new Product {
-            ImageUrl = "images/boss_rv500_001.jpg",
-            Title = "Boss RV-500",
-            Description = "Advanced reverb pedal offering twelve different reverb modes, deep editing capabilities, and high-quality sound for versatile and immersive reverb effects.",
-            Price = 550
-            },
-        
-        new Product {
-            ImageUrl = "images/boss_ve500_001.jpg",
-            Title = "Boss VE-500",
-            Description = "Comprehensive vocal effects processor with harmony, pitch correction, and looping capabilities, designed for enhancing live vocal performances with high-quality sound and versatile control options.",
-            Price = 650
-            },
-
-        new Product {
-            ImageUrl = "images/boss-compact_jb2_001.jpg",
-            Title = "Boss JB-2",
-            Description = "",
-            Price = 300
-            },
-        
-        new Product {
-            ImageUrl = "images/boss-compact_ad2_001.jpg",
-            Title = "Boss AD-2",
-            Description = "",
-            Price = 170
-            },
-        
-        new Product {
-            ImageUrl = "images/boss_ac-2_001jpg",
-            Title = "Boss AC-2",
-            Description = "",
-            Price = 120
-            },
-
-        new Product {
-            ImageUrl = "images/boss_ac-3_001.jpg",
-            Title = "Boss AC-3",
-            Description = "",
-            Price = 170
-            }, 
-        
-        new Product {
-            ImageUrl = "images/boss_aw-2_001.jpg",
-            Title = "Boss AW-2",
-            Description = "",
-            Price = 170
-            },
-        
-
-        };
-
-        
-    };
+        products = ProductService.GetProducts();
+    }
 }

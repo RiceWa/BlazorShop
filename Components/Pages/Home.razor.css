@@ -42,7 +42,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .card-img-top {
@@ -51,15 +51,10 @@ body {
     background-size: contain; /* Ensure the entire image fits within the container */
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-size 0s ease, background-position 0s ease; /* Smooth transition for zoom and position */
     border: solid 2px #ddd;
     padding: 10px;
     margin: 10px auto 0; /* Center image horizontally and add top margin */
     box-sizing: border-box;
-}
-
-.card-img-top:hover {
-    background-size: 100%; /* Zoom in on hover */
 }
 
 .card-body {
@@ -80,12 +75,15 @@ body {
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 16px;
-    flex-grow: 1; /* Allow text to grow and take available space */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    flex-grow: 1;
+    display: -webkit-box; /* Required for -webkit-line-clamp */
+    -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3; /* Limit to 3 lines */
+    line-height: 1.2em; /* Adjust line height */
+    max-height: 3.6em; /* 1.2em * 3 lines */
+    white-space: wrap;
 }
 
 .card-footer {

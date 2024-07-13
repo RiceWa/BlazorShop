@@ -21,6 +21,18 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-200_ir200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-200_ir200_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-200_rc10r_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-200_rc10r_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-200_sy200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-200_sy200_001.jpg"
+    },
+    {
       "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact-wazacraft_bp1w_001.jpg",
       "PackagePath": "staticwebassets/images/boss-compact-wazacraft_bp1w_001.jpg"
     },
@@ -49,6 +61,34 @@
       "PackagePath": "staticwebassets/images/boss-compact-wazacraft_tb2w_001.jpg"
     },
     {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_ad2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_ad2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_aw3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_aw3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_bc-1x_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_bc-1x_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_ce3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_ce3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_cp1x_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_cp1x_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_dd3t_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_dd3t_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-compact_jb2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss-compact_jb2_001.jpg"
+    },
+    {
       "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss-waza_ce-2w_001.jpg",
       "PackagePath": "staticwebassets/images/boss-waza_ce-2w_001.jpg"
     },
@@ -61,16 +101,140 @@
       "PackagePath": "staticwebassets/images/boss-wazacraft_vb-2w_001.jpg"
     },
     {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_200-dd200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_200-dd200_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_200-eq200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_200-eq200_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_200-md200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_200-md200_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_200-od200_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_200-od200_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ac-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ac-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ac-2_001.jpg.jpg",
+      "PackagePath": "staticwebassets/images/boss_ac-2_001.jpg.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ac-3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ac-3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_aw-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_aw-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bb-1x_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bb-1x_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bc-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bc-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bd-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bd-2_001.jpg"
+    },
+    {
       "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bd-2w_001.jpg",
       "PackagePath": "staticwebassets/images/boss_bd-2w_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bf-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bf-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bf-2b_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bf-2b_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_bf-3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_bf-3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ce-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ce-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ce-2b_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ce-2b_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ce-5_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ce-5_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ceb-3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ceb-3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ch-1_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ch-1_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_cs-3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_cs-3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_da-2_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_da-2_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-3_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-3_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-500_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-500_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-5_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-5_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-6_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-6_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-7_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-7_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dd-8_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_dd-8_001.jpg"
     },
     {
       "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_dm-2w_001.jpg",
       "PackagePath": "staticwebassets/images/boss_dm-2w_001.jpg"
     },
     {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_md500_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_md500_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_rc500_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_rc500_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_rv500_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_rv500_001.jpg"
+    },
+    {
       "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_sd-1w_001.jpg",
       "PackagePath": "staticwebassets/images/boss_sd-1w_001.jpg"
+    },
+    {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/boss_ve500_001.jpg",
+      "PackagePath": "staticwebassets/images/boss_ve500_001.jpg"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazorShop.Microsoft.AspNetCore.StaticWebAssets.props",

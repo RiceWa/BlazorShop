@@ -1,0 +1,134 @@
+@page "/product/{id}"
+@using BlazorShop.Models
+@inject NavigationManager NavigationManager
+@inject BlazorShop.Services.ProductService ProductService
+
+
+<body>
+    <div class="container">
+
+        <div class = "img-container">
+            <img src="@product.ImageUrl" alt="@product.Title" class="product-image"/>
+        </div>
+
+        <div class="text-container">
+            <p class="product-title">@product.Title</p>
+            <p class ="product-description">@product.Description</p>
+
+            <div class="price-and-cart-container">
+                <p class ="product-price">Price: @product.Price.ToString("C")</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        height: calc(100vh - 100px);
+    }
+
+    .img-container {
+        flex: 1 1 45%;
+        width: 50%;
+        max-width: 100%;
+        height: auto;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .product-image {
+        max-height: 500px;
+        width: auto;
+    }
+
+    .text-container {
+        flex: 1 1 45%;
+        width: 50%;
+        padding: 30px;
+    }
+
+    .product-title{
+        font-size: 2rem;
+        border-bottom: solid 1px black;
+    }
+
+    .product-description{
+        font-size: 1.5rem;
+    }
+
+    .price-and-cart-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-price{
+        font-size: 1.5rem;
+    }
+
+    .add-to-cart{
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+    background-color: #55AD9B;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    }
+
+    .btn-primary:hover {
+        background-color: #95D2B3;
+    }
+
+
+    @@media (max-width: 1000px) {
+        .img-container, .text-container {
+            flex: 1 1 100%; /* On small screens, take full width */
+            max-width: 100%; /* On small screens, take full width */
+            padding: 20px; /* Reduce padding for smaller screens */
+        }
+
+        .container {
+            flex-direction: column; /* Stack containers vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .img-container {
+            text-align: center; /* Center the image horizontally */
+        }
+
+</style>
+
+
+
+
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private Product product;
+
+    protected override void OnInitialized()
+    {
+        product = ProductService.GetProductById(Id);
+    }
+}
+
+@if (product == null)
+{
+    <p>Product not found.</p>
+}

@@ -29,28 +29,53 @@ main[b-cx2sbui8ia] {
 p.logo[b-cx2sbui8ia], p.cart[b-cx2sbui8ia] {
     margin-top: 1rem;
 }
-.logo[b-cx2sbui8ia], .cart[b-cx2sbui8ia] {
+.logo[b-cx2sbui8ia]{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     background-color: #95D2B3;
     padding: 0.5rem 1rem;
 }
 .cart[b-cx2sbui8ia] {
-    background-color: white;
+    display: flex;
+    background-color: #95D2B3;
+    padding: 0.5rem 1rem;
+    height: 40px;
 }
+
+.cart-icon[b-cx2sbui8ia] {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.page[b-cx2sbui8ia] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+main[b-cx2sbui8ia] {
+    flex: 1;
+}
+
+.search-button[b-cx2sbui8ia] {
+    padding: 0.5rem 1rem;
+}
+
+.search-button:hover[b-cx2sbui8ia] {
+    background-color: #95D2B3;
+}
+
 .search-container[b-cx2sbui8ia] {
     display: flex;
     flex: 1;
     margin: 0 1rem;
 }
-.search-input[b-cx2sbui8ia]{
+
+.search-input[b-cx2sbui8ia] {
     flex: 1;
     padding: 0.5rem;
 }
-.search-button[b-cx2sbui8ia] {
-    padding: 0.5rem 1rem;
-}
-
 .product-area[b-cx2sbui8ia]{
     display: flex;
     flex-wrap: wrap;
@@ -302,7 +327,7 @@ body[b-h2tgf6zun9] {
 }
 
 .card:hover[b-h2tgf6zun9] {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .card-img-top[b-h2tgf6zun9] {
@@ -311,15 +336,10 @@ body[b-h2tgf6zun9] {
     background-size: contain; /* Ensure the entire image fits within the container */
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-size 0s ease, background-position 0s ease; /* Smooth transition for zoom and position */
     border: solid 2px #ddd;
     padding: 10px;
     margin: 10px auto 0; /* Center image horizontally and add top margin */
     box-sizing: border-box;
-}
-
-.card-img-top:hover[b-h2tgf6zun9] {
-    background-size: 100%; /* Zoom in on hover */
 }
 
 .card-body[b-h2tgf6zun9] {
@@ -340,12 +360,15 @@ body[b-h2tgf6zun9] {
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 16px;
-    flex-grow: 1; /* Allow text to grow and take available space */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    flex-grow: 1;
+    display: -webkit-box; /* Required for -webkit-line-clamp */
+    -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3; /* Limit to 3 lines */
+    line-height: 1.2em; /* Adjust line height */
+    max-height: 3.6em; /* 1.2em * 3 lines */
+    white-space: wrap;
 }
 
 .card-footer[b-h2tgf6zun9] {

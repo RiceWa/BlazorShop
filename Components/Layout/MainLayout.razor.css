@@ -28,28 +28,53 @@ main {
 p.logo, p.cart {
     margin-top: 1rem;
 }
-.logo, .cart {
+.logo{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     background-color: #95D2B3;
     padding: 0.5rem 1rem;
 }
 .cart {
-    background-color: white;
+    display: flex;
+    background-color: #95D2B3;
+    padding: 0.5rem 1rem;
+    height: 40px;
 }
+
+.cart-icon {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+}
+
+.search-button:hover {
+    background-color: #95D2B3;
+}
+
 .search-container {
     display: flex;
     flex: 1;
     margin: 0 1rem;
 }
-.search-input{
+
+.search-input {
     flex: 1;
     padding: 0.5rem;
 }
-.search-button {
-    padding: 0.5rem 1rem;
-}
-
 .product-area{
     display: flex;
     flex-wrap: wrap;
