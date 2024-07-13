@@ -28,4 +28,3 @@
 /home/sho/Documents/Blazor/BlazorShop/obj/Debug/net8.0/BlazorShop.genruntimeconfig.cache
 /home/sho/Documents/Blazor/BlazorShop/obj/Debug/net8.0/ref/BlazorShop.dll
 /home/sho/Documents/Blazor/BlazorShop/obj/Debug/net8.0/scopedcss/Components/Pages/Home.razor.rz.scp.css
-/home/sho/Documents/Blazor/BlazorShop/obj/Debug/net8.0/scopedcss/Components/Pages/SearchResults.razor.rz.scp.css
