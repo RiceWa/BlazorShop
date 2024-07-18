@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6wT24eSL4yeAySt4JuZBaJaMw8kVWXjKym4fy2B9lXk=",
+  "Hash": "1JxjRHAJgNePEqsvWv+i0qmKqUtKCshPtZZrf1uCTZI=",
   "Source": "BlazorShop",
   "BasePath": "_content/BlazorShop",
   "Mode": "Default",
@@ -1155,6 +1155,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/boss-wazacraft_vb-2w_001.jpg"
+    },
+    {
+      "Identity": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/cart.svg",
+      "SourceId": "BlazorShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/",
+      "BasePath": "_content/BlazorShop",
+      "RelativePath": "images/cart.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cart.svg"
     }
   ]
 }

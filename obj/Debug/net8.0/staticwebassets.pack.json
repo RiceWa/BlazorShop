@@ -237,6 +237,10 @@
       "PackagePath": "staticwebassets/images/boss_ve500_001.jpg"
     },
     {
+      "Id": "/home/sho/Documents/Blazor/BlazorShop/wwwroot/images/cart.svg",
+      "PackagePath": "staticwebassets/images/cart.svg"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazorShop.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
