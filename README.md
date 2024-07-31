@@ -1,3 +1,5 @@
+https://blazorshop.azurewebsites.net/
+
 Home Page
 ![Home-Page](./wwwroot/images/home-page.png)
 
